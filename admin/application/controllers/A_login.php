@@ -12,7 +12,7 @@ class A_login extends CI_Controller{
 
   //Index login
   public function index(){
-    $this->load->view('admin/template/login');
+    $this->load->view('template/login');
   }
 
   //aksi Login

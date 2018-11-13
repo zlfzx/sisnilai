@@ -6,7 +6,7 @@ class Admin extends CI_Controller{
     parent::__construct();
     if ($this->session->userdata('status') != 'admin') {
       // code...
-      redirect('admin/login');
+      redirect('login');
     }
 
   }
@@ -15,24 +15,24 @@ class Admin extends CI_Controller{
   public function index(){
     $data['title'] = 'Administrator';
 
-    $this->load->view('admin/template/header', $data);
-    $this->load->view('admin/utama');
-    $this->load->view('admin/template/footer');
+    $this->load->view('template/header', $data);
+    $this->load->view('utama');
+    $this->load->view('template/footer');
   }
 
   //Siswa
   public function siswa(){
     $data['title'] = 'Siswa';
 
-    $this->load->view('admin/template/header', $data);
-    $this->load->view('admin/siswa');
-    $this->load->view('admin/template/footer');
+    $this->load->view('template/header', $data);
+    $this->load->view('siswa');
+    $this->load->view('template/footer');
   }
 
 
   //logout
   public function logout(){
     $this->session->sess_destroy();
-    redirect('admin/login');
+    redirect('login');
   }
 }
