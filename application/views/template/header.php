@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -25,4 +25,18 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav>-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><?= $title;?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="<?=base_url('assets/img/logo.png');?>">
+  <link rel="stylesheet" type="text/css" media="screen" href="<?=base_url('assets/css/bootstrap.min.css');?>" />
+  <link rel="stylesheet" href="<?=base_url('assets/css/main.css');?>">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <script src="<?=base_url('assets/js/fontAwesome/all.js');?>"></script>
+</head>
+<body>

@@ -50,8 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'user';
-$route['profil'] = 'user/profil';
+$route['nilai'] = 'user/nilai';
+$route['setting'] = 'user/setting';
 $route['login'] = 'u_login';
+$route['logout'] = 'u_login/logout';
 $route['reset'] = 'u_login/reset';
 $route['resetp'] = 'u_login/resetp';
 $route['404_override'] = 'user/blank';

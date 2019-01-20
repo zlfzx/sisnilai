@@ -39,6 +39,7 @@ class User extends CI_Controller {
 
 		$this->load->view('template/header', $data);
 		$this->load->view('utama');
+		$this->load->view('template/footer');
 	}
 
 	//Nilai
@@ -53,16 +54,16 @@ class User extends CI_Controller {
 
 		$this->load->view('template/header', $data);
 		$this->load->view('nilai');
+		$this->load->view('template/footer');
 	}
 
 	//Profil
-	public function profil(){
-		$data['title'] = 'Profil';
-		$nis = array('nis' => $this->session->nis);
-		$data['pertanyaan'] = $this->m_user->cek_pertanyaan($nis)->row_array();
+	public function setting(){
+		$data['title'] = 'Setting';
 
 		$this->load->view('template/header', $data);
-		$this->load->view('profil');
+		$this->load->view('setting');
+		$this->load->view('template/footer');
 	}
 	//Ganti Password
 	public function update_password(){
@@ -97,8 +98,6 @@ class User extends CI_Controller {
 
 	//404
 	public function blank(){
-		$data['title'] = 'Page Not Found';
-		$this->load->view('template/header', $data);
-		$this->load->view('404');
+		redirect('');
 	}
 }
